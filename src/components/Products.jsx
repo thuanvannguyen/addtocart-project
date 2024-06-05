@@ -1,11 +1,8 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { PiShoppingCart } from "react-icons/pi";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { add } from "../redux/features/navbar/navbarSlice";
-
-// Component
-import Hero from "./Hero";
 
 import "../styles/Products.css";
 
@@ -18,8 +15,6 @@ function Products() {
 
   return (
     <>
-      <Hero />
-
       <h1>PRODUCTS</h1>
 
       <div id="flex-container">

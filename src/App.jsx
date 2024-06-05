@@ -3,16 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "./redux/features/products/productsSlice";
 
 // Components
-import Navbar from "./components/Navbar";
-import Loading from "./components/Loading";
-import Products from "./components/Products";
 import Details from "./components/Details";
+import Loading from "./components/Loading";
+import Navbar from "./components/Navbar";
+import Products from "./components/Products";
 import ShoppingCart from "./components/ShoppingCart";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import { Toaster } from "react-hot-toast";
-
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "../src/styles/App.css";
 
 function App() {

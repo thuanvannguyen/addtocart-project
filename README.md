@@ -43,3 +43,18 @@ const myAsyncThunk = createAsyncThunk(
 - `payloadCreator`: Một hàm xử lý bất đồng bộ trả về một promise hoặc một giá trị. Nó có thể chấp nhận các tham số truyền vào và một đối tượng `thunkAPI` chứa các phương thức và thuộc tính hữu ích.
 - `options`: Một đối tượng tùy chọn có thể chứa các callback như `condition`, `dispatchConditionRejection`, `idGenerator`, `serializeError`, `getPendingMeta`.
 Sau khi gọi `createAsyncThunk`, nó sẽ trả về một action creator được gọi là `myAsyncThunk`.
+
+#### 4. Sử dụng trong Slice:
+
+
+Khi sử dụng `createAsyncThunk` trong một slice, bạn có thể sử dụng `extraReducers` để xử lý các trạng thái khác nhau của thao tác không đồng bộ (pending, fulfilled, rejected).
+
+#### 5. Trong Component:
+
+- Sử dụng dispatch(myAsyncThunk()) để gửi yêu cầu không đồng bộ và quản lý trạng thái từ slice tương ứng.
+- Sử dụng useSelector để truy xuất dữ liệu từ store.
+- Có thể sử dụng các thuộc tính như isFetching, isFulfilled, isRejected để kiểm tra trạng thái của thao tác không đồng bộ.
+
+#### 6. Hủy bỏ:
+
+`createAsyncThunk` hỗ trợ hủy bỏ thao tác không đồng bộ trước khi thực thi (condition) hoặc khi đang chạy (signal).

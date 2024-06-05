@@ -26,7 +26,7 @@ src
 
 >Note: `createAsyncThunk` giúp giảm bớt boilerplate code cho việc xử lý các thao tác không đồng bộ và tích hợp dễ dàng với Redux Toolkit, đặc biệt là trong các tác vụ liên quan đến gọi API.
 
-#### Link Doc: https://redux-toolkit.js.org/api/createAsyncThunk<br>
+#### Link doc: https://redux-toolkit.js.org/api/createAsyncThunk<br>
 
 
 #### 1. Tạo một Async Thunk:

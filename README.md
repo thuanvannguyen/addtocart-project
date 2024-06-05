@@ -4,6 +4,9 @@ Dự án này sử dụng cấu trúc thư mục dựa trên tính năng cho `Re
 
 > Cấu trúc thư mục `"feature-based"` giúp quản lý mã nguồn rõ ràng và hiệu quả, đặc biệt là đối với các ứng dụng lớn và phức tạp. Cách tổ chức này không chỉ làm cho mã nguồn dễ dàng bảo trì mà còn tạo điều kiện thuận lợi cho việc mở rộng và phát triển tính năng mới.
 
+> Boilerplate code là các đoạn mã mẫu, thường là những đoạn mã được lặp đi lặp lại trong nhiều dự án phần mềm khác nhau hoặc trong cùng một dự án. Các đoạn mã này thường là những phần cần thiết để thiết lập một ứng dụng hoặc một tính năng cụ thể.
+
+
 
 ```plaintext
 src

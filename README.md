@@ -25,7 +25,7 @@ src
 
 
 #### 1. Tổng quát:
-- createAsyncThunk là một hàm trong Redux Toolkit cho phép tạo ra các action creators cho các thao tác không đồng bộ.
+- `createAsyncThunk` là một hàm trong Redux Toolkit cho phép tạo ra các action creators cho các thao tác không đồng bộ.
 - Nó giúp xử lý các tác vụ bất đồng bộ (ví dụ: gọi API) một cách dễ dàng và linh hoạt hơn.
 
 #### 2. Cú pháp:

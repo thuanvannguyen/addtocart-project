@@ -51,11 +51,11 @@ export const navbarSlice = createSlice({
         remove: (state, action) => {
             const index = state.value.findIndex(product => product.id === action.payload);
 
-            if (index !== -1) { // Nếu tìm thấy sản phẩm trong giỏ hàng
-                state.value.splice(index, 1); // Xóa sản phẩm khỏi giỏ hàng
+            if (index !== -1) { 
+                state.value.splice(index, 1); 
 
-                storeInLocalStorage(state.value); // Lưu trạng thái mới vào localStorage
-                toast.success("Product is removed!"); // Hiển thị thông báo thành công
+                storeInLocalStorage(state.value); 
+                toast.success("Product is removed!"); 
             }
         },
 
@@ -65,10 +65,10 @@ export const navbarSlice = createSlice({
 
             if (index !== -1) {
                 if (state.value[index].quantity > 1) {
-                    state.value[index].quantity -= 1; // Giảm số lượng nếu lớn hơn 1
+                    state.value[index].quantity -= 1; 
 
-                    storeInLocalStorage(state.value); // Lưu trạng thái mới vào localStorage
-                    toast.success("Product is removed!"); // Hiển thị thông báo thành công
+                    storeInLocalStorage(state.value); 
+                    toast.success("Product is removed!"); 
                 }
             }
         }

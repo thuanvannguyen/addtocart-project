@@ -16,9 +16,9 @@ export const getProducts = createAsyncThunk("getProducts", async () => {
 
 // Tạo slice để quản lý trạng thái sản phẩm
 export const productsSlice = createSlice({
-    name: "products",          // Tên của slice
-    initialState,              // Trạng thái ban đầu
-    reducers: {},              // Không có reducer đồng bộ nào được định nghĩa
+    name: "products",
+    initialState,
+    reducers: {},
     extraReducers: (builder) => {
         // Khi yêu cầu đang được xử lý
         builder.addCase(getProducts.pending, (state, action) => {
@@ -26,14 +26,14 @@ export const productsSlice = createSlice({
         })
         // Khi yêu cầu thành công
         builder.addCase(getProducts.fulfilled, (state, action) => {
-            state.loading = false;     // Đặt trạng thái loading thành false
-            state.value = action.payload; // Cập nhật dữ liệu sản phẩm vào state
+            state.loading = false;
+            state.value = action.payload;
         })
         // Khi yêu cầu thất bại
         builder.addCase(getProducts.rejected, (state, action) => {
-            state.error = "Bad fetching!"; // Đặt thông báo lỗi
+            state.error = "Bad fetching!";
         })
     }
 });
 
-export default productsSlice.reducer; // Xuất reducer để sử dụng trong store của Redux
+export default productsSlice.reducer; 

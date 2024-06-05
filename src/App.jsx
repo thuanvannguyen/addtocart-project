@@ -1,9 +1,41 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "./redux/features/products/productsSlice";
 
-const App = () => {
+// Components
+import Navbar from "./components/Navbar";
+import Loading from "./components/Loading";
+import Products from "./components/Products";
+import Details from "./components/Details";
+import ShoppingCart from "./components/ShoppingCart";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import { Toaster } from "react-hot-toast";
+
+import "../src/styles/App.css";
+
+function App() {
+  const dispatch = useDispatch();
+
+  // Lấy danh sách sản phẩm khi component được tải
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch])
+
+  const loading = useSelector(state => state.productsReducer.loading);
+
   return (
-    <h1>App</h1>
-  )
+    <Router>
+      <Toaster />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={loading ? <Loading /> : <Products />} />
+        <Route path="/details/:id" element={<Details />} />
+        <Route path="/shoppingCart" element={<ShoppingCart />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

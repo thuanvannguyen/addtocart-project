@@ -7,10 +7,13 @@ import { add } from "../redux/features/navbar/navbarSlice";
 import "../styles/Products.css";
 
 function Products() {
+  // Lấy danh sách sản phẩm từ Redux store
   const products = useSelector((state) => state.productsReducer.value); // products is an array
 
+  // Sử dụng hook useNavigate từ react-router-dom để điều hướng đến trang chi tiết sản phẩm
   const navigate = useNavigate();
 
+  // Sử dụng hook useDispatch để gửi action đến Redux store
   const dispatch = useDispatch();
 
   return (
@@ -41,7 +44,6 @@ function Products() {
                     id="shopping-cart"
                     onClick={() => dispatch(add(eachProduct))}
                   />{" "}
-                  {/* sepete ekleme işlemi */}
                 </div>
               </div>
             );

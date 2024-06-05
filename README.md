@@ -7,11 +7,14 @@ Dự án này sử dụng cấu trúc thư mục dựa trên tính năng cho `Re
 ```plaintext
 src
 └───redux
+    ├───📁 app
+    │   └───store.js
     └───features
-        └───details
-        │       detailsSlice.js
-        └───navbar
-        │       navbarSlice.js
-        └───products
-                productsSlice.js
+        ├───📁 details
+        │   └───📄 detailsSlice.js
+        ├───📁 navbar
+        │   └───📄 navbarSlice.js
+        └───📁 products
+            └───📄 productsSlice.js
+
 ```

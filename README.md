@@ -162,9 +162,7 @@ const usersSlice = createSlice({
 // Khi bạn muốn gửi yêu cầu lấy dữ liệu người dùng
 // dispatch(fetchUserById(userId))
 ```
-##### Giải thích:
-
-- Chúng ta sử dụng createAsyncThunk để tạo một tác vụ không đồng bộ fetchUserById, có thể lấy dữ liệu người dùng từ API.
-- Trong tác vụ, chúng ta kiểm tra signal.aborted trước khi gửi yêu cầu. Nếu nó đã bị hủy bỏ, chúng ta ném một lỗi để dừng tác vụ.
-- Trong slice của Redux, chúng ta xử lý các trạng thái khác nhau của tác vụ: pending (đang chờ), fulfilled (thành công) và rejected (thất bại).
-- Khi gọi fetchUserById(userId), Redux sẽ tự động gọi và xử lý tác vụ, và cập nhật trạng thái Redux tương ứng.
+> - Chúng ta sử dụng createAsyncThunk để tạo một tác vụ không đồng bộ fetchUserById, có thể lấy dữ liệu người dùng từ API.
+> - Trong tác vụ, chúng ta kiểm tra signal.aborted trước khi gửi yêu cầu. Nếu nó đã bị hủy bỏ, chúng ta ném một lỗi để dừng tác vụ.
+> - Trong slice của Redux, chúng ta xử lý các trạng thái khác nhau của tác vụ: pending (đang chờ), fulfilled (thành công) và rejected (thất bại).
+> - Khi gọi fetchUserById(userId), Redux sẽ tự động gọi và xử lý tác vụ, và cập nhật trạng thái Redux tương ứng.
